@@ -11,11 +11,14 @@ const app = express();
 connectDB();
 
 // cors
+app.use(express.static('public'))
 app.use(cors({ origin: true, credentials: true }));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
-app.get('/', (req, res) => res.send('Its working!'));
+app.get('/', (req, res) => {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  })
 
 // use Routes
 app.use('/api/books', books);
