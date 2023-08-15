@@ -4,8 +4,8 @@
   "description": "Basic CRUD app using MERN - LMAO OMG LGTM NSFW ASAP TTYL",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "app": "nodemon app.js",
+    "start": "node index.js",
+    "app": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
